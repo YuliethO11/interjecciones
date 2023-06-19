@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+*{
+    font-family: 'Kablammo', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    text-align:center;
+    background: url("../img/ima3.jpg");
+    background-size: cover;
+}
+
+body#body.img-2{
+    background: url("../img/ima1.jpg");
+    background-size: cover ;
+}
+
+#interaciones{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff4f ;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+#interaciones h2{
+    color: aqua;
+}
+
+#interaciones button{
+    background: #000;
+    color: aquamarine;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#cont-figura{
+    width: 90%;
+    margin: 0 auto ;
+    padding: 30px;
+    background: #0000004f ;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+#cont-imagen{
+    width: 90%;
+    margin: 0 auto ;
+    padding: 30px;
+    background: #0000004f ;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+#figura{
+    width: 300px;
+    height: 300px;
+    background: rgb(230, 217, 103);
+    margin: 20px auto;
+    transition: 1s;
+}
+
+#figura.circulo {
+    transform: rotate(-360deg);
+    border-radius: 50%;
+    background: yellowgreen;
+}
+
+#figura.rectangulo {
+    width: 600px;
+    height: 150px;
+    background: rgb(85, 175, 115);
+    transition: 1s;
+    transform: rotate(-360deg);
+}
+
+#figura.desgradado {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, #8E3200, #D7A86E);
+}
+
+.figura {
+    width: 200px;
+    height: 200px;
+    background-color: #61481C;
+    position: relative;
+    overflow: hidden;
+}
+
+.figura.ondas::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #605b03;
+    transform: scale(1.5);
+    border-radius: 50%;
+    animation: ondas 3s linear infinite;
+}
+
+@keyframes ondas {
+    0% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
+#figura.pacman{
+    width:0;
+    height:0;
+    border-right: 200px solid transparent; 
+    border-top: 200px solid #b8b25c; 
+    border-left: 200px solid #b8b25c; 
+    border-bottom: 200px solid #b8b25c; 
+    border-radius: 100%;
+}
+#figura.rombo {
+    width: 200px;
+    height: 200px;
+    background: #f0ad4e;
+    transform: rotate(45deg);
+}#figura.triangulo{
+    width: 0;
+    height: 0;
+    border-right: 150px solid transparent;
+    border-top: 150px solid transparent;
+    border-left: 150px solid transparent;
+    border-bottom: 150px solid #0ce2adcc;
+}
+#figura.fondo{
+    background: url("../img/ima3.jpg");
+    width: 700px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#panel-lateral {
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    left: -400px;
+    top: 0;
+    background:#fdfdfd;
+    z-index: 999;
+    padding-top: 150px;
+    padding-left: 40px;
+    transition: .5s;
+}
+#panel-lateral.activo{
+    left: 0;
+}
+
+#panel-lateral h3{
+    color: #000;
+    font-size: 30px;
+    text-align: left;
+}
+
+#panel-lateral a{
+    display: block;
+    padding: 20px;
+    width: 220px;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+#panel-lateral .close{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+}
+
+/* panel superior*/ 
+#panel-superior {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: -250px;
+    left: 0;
+    background: #fdfdfd;
+    z-index: 999;
+    padding-top: 20px;
+    padding-left: 40px;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#panel-superior.activo {
+    top: 0;
+}
+
+#panel-superior iframe {
+    width: 200px;
+    max-height: 200px; /* Ajusta el tamaño del video según tus necesidades */
+}
+
+#panel-superior h3 {
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#panel-superior a {
+    display: block;
+    padding: 20px;
+    width: 220px;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+#panel-superior .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+}
+#figura.gif{
+    background: url("../img/Anime.webp");
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
